@@ -1,0 +1,27 @@
+{
+  "name": "skills-finder",
+  "version": "1.0.0",
+  "description": "This application will help employees to find people based on specific skills that they need helps with. For example, if you work in a software company and need to consult, need help, or would like to talk to someone about JavaScript, Node.JS, or MongoDB you would type the skill in a search engine and the application will show the person o people with skill. If there is any results, it will show the name, list of skills, a profile that includes contact, department, and location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvaldez/skills-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvaldez/skills-finder/issues"
+  },
+  "homepage": "https://github.com/nvaldez/skills-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.2",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.15"
+  }
+}
