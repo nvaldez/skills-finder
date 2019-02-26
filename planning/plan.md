@@ -30,7 +30,7 @@ For this model, user will be able to create, read, and update.
 
 ```
 Skill: Model
-Name: String
-Description?? : String
+Name: Array
+Field : String //back-end, front-end or full stack
 
 ```

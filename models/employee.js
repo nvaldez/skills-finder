@@ -3,18 +3,22 @@ const Schema = mongoose.Schema;
 
 const Employee = new Schema({
   name: String,
-  skill: {
-    type: Schema.Types.ObjectId,
-    ref: "Skill"
+  title: String,
+  contact: {
+    email: String,
+    phone: String,
+    gitHub: String
   },
-
-  profile: [Profile]
-});
-
-const Profile = new Schema({
-  contact: String,
   department: String,
-  location: String
+  location: String,
+  specialty: String,
+
+  skills: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Skill"
+    }
+  ]
 });
 
 module.exports = Employee;
