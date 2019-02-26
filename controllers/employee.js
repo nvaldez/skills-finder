@@ -1,9 +1,12 @@
 // const express = require("express");
 // const router = require("../routes/index");
+const { Employee, Skill } = require("../models/index");
 
 module.exports = {
   index: (req, res) => {
-    res.render("employee/index");
+    Employee.find({}).then(employees => {
+      res.render("employee/index", { employees });
+    });
   },
 
   new: (req, res) => {
