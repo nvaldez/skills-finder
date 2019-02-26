@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/user.js");
+const controller = require("../controllers/employee.js");
 
 router.get("/", controller.index);
 router.get("/new", controller.new);
