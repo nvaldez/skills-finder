@@ -1,8 +1,11 @@
 <h1>Employee Information</h1>
 {{#each employees}}
 <p>
-    <a href="/{{_id}}">{{name}}</a>
+    <a href="/employee/{{_id}}">{{name}}</a>
+</p>
 
+<p>
+    <a href="/employee/new">Add New Employee</a>
 </p>
 
 <p>Title: {{title}}</p>
@@ -18,6 +21,6 @@
 <p>Skills: {{skills}}</p>
 
 {{/each}}
-<form action="/" method="post">
+{{!-- <form action="/employee" method="post">
     <input class="" type="submit" value="Submit">
-</form>
+</form> --}}

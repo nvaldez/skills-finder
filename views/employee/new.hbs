@@ -1,6 +1,6 @@
 <h2>Create new employee profile</h2>
 
-<form action="/" method="post">
+<form action="/employee" method="post">
     <p>
         <label for="name">Name:</label>
         <input type="text" name="name">
@@ -15,15 +15,15 @@
         <ul>
             <li>
                 <label for="email">Email:</label>
-                <input type="text" name="email">
+                <input type="text" name="contact[email]">
             </li>
             <li>
                 <label for="phone">Phone:</label>
-                <input type="text" name="phone">
+                <input type="text" name="contact[phone]">
             </li>
             <li>
                 <label for="github">GitHub:</label>
-                <input type="text" name="github">
+                <input type="text" name="contact[github]">
             </li>
         </ul>
     </p>

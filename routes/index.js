@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-router.use(require("./employee"));
+router.get("/", function(req, res) {
+  res.redirect("/employee");
+});
+
+router.use("/employee", require("./employee"));
 
 module.exports = router;
