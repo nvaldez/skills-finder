@@ -15,33 +15,33 @@
         <ul>
             <li>
                 <label for="email">Email:</label>
-                <input type="text" name="contact[email]">
+                <input type="text" name="contact[email]" value="{{employee.contact.email}}">
             </li>
             <li>
                 <label for="phone">Phone:</label>
-                <input type="text" name="contact[phone]">
+                <input type="text" name="contact[phone]" value="{{employee.contact.phone}}">
             </li>
             <li>
                 <label for="github">GitHub:</label>
-                <input type="text" name="contact[github]">
+                <input type="text" name="contact[github]" value="{{employee.contact.github}}">
             </li>
         </ul>
     </p>
     <p>
         <label for="department">Department:</label>
-        <input type="text" name="department"> </p>
+        <input type="text" name="department" value="{{employee.department}}">
     </p>
     <p>
         <label for="location">Location:</label>
-        <input type="text" name="location"> </p>
+        <input type="text" name="location" value="{{employee.location}}">
     </p>
     <p>
         <label for="spcecialty">Specialty:</label>
-        <input type="text" name="specialty"> </p>
+        <input type="text" name="specialty" value="{{employee.specialty}}">
     </p>
     <p>
         <label for="skills">Skills:</label>
-        <input type="text" name="skills"> </p>
+        <input type="text" name="skills" value="{{employee.skills}}">
     </p>
     <input type="submit" value="Update">
 

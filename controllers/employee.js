@@ -54,30 +54,24 @@ module.exports = {
     });
   },
 
-  update: (req, res) => {
-    const {
-      name,
-      title,
-      email,
-      phone,
-      contact,
-      department,
-      location,
-      specialty
-    } = req.body;
-    Employee.findOneAndUpdate({ _id: req.params.id }).then(employee => {
-      employee.name = name;
-      employee.title = title;
-      employee.email = email;
-      employee.phone = phone;
-      employee.contact = contact;
-      employee.department = department;
-      employee.location = location;
-      employee.specialty = specialty;
+  update: function(req, res) {
+    Employee.findOne({
+      _id: req.params.id
+    }).then(employee => {
+      employee.name = req.body.name;
+      employee.title = req.body.title;
+      employee.contact.email = req.body.contact.email;
+      employee.contact.phone = req.body.contact.phone;
+      employee.contact.github = req.body.contact.github;
+      employee.department = req.body.department;
+      employee.location = req.body.location;
+      employee.specialty = req.body.specialty;
+
+      console.log(employee.contact.email);
 
       employee.save(err => {
-        res.send("update working");
-        console.log(req.body);
+        if (err) return res.status(500).send(err);
+        res.redirect("/");
       });
     });
   },
