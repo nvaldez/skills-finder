@@ -50,15 +50,41 @@ module.exports = {
   edit: (req, res) => {
     // res.send("working");
     Employee.findOne({ _id: req.params.id }).then(employee => {
-      res.render("employee/edit");
+      res.render("employee/edit", { employee });
     });
   },
 
   update: (req, res) => {
-    res.send("update");
+    const {
+      name,
+      title,
+      email,
+      phone,
+      contact,
+      department,
+      location,
+      specialty
+    } = req.body;
+    Employee.findOneAndUpdate({ _id: req.params.id }).then(employee => {
+      employee.name = name;
+      employee.title = title;
+      employee.email = email;
+      employee.phone = phone;
+      employee.contact = contact;
+      employee.department = department;
+      employee.location = location;
+      employee.specialty = specialty;
+
+      employee.save(err => {
+        res.send("update working");
+        console.log(req.body);
+      });
+    });
   },
 
-  delete: (req, res) => {
-    res.send("delete");
+  delete: function(req, res) {
+    Employee.findByIdAndRemove({ _id: req.params.id }).then(employee => {
+      res.redirect("/");
+    });
   }
 };

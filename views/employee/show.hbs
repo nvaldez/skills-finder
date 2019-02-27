@@ -16,7 +16,7 @@
 <p>Specialty: {{employee.specialty}}</p>
 <p>Skills: {{employee.skills}}</p>
 
-<form action="/:id?_method=DELETE" method="post">
+<form action="/employee/{{employee._id}}?_method=DELETE" method="post">
     <input class="" type="submit" value="Delete">
     <a href="/employee/{{employee._id}}/edit">Edit</a>
 </form>
