@@ -1,5 +1,23 @@
-<h1>{{employees}}</h1>
+<h1>Employee Information</h1>
+{{#each employees}}
+<p>
+    <a href="/{{_id}}">{{name}}</a>
 
+</p>
+
+<p>Title: {{title}}</p>
+<p>Contact</p>
+<ul>
+    <li>Email: {{contact.email}}</li>
+    <li>Phone: {{contact.phone}}</li>
+    <li>GitHub {{contact.gitHub}}</li>
+</ul>
+<p>Department: {{department}}</p>
+<p>Location: {{location}}</p>
+<p>Specialty: {{specialty}}</p>
+<p>Skills: {{skills}}</p>
+
+{{/each}}
 <form action="/" method="post">
     <input class="" type="submit" value="Submit">
 </form>

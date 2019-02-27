@@ -1,5 +1,22 @@
-<h1>Show</h1>
+<h1>Employee Information</h1>
+<p>
+    <a>{{employee.name}}</a>
+
+</p>
+
+<p>Title: {{employee.title}}</p>
+<p>Contact</p>
+<ul>
+    <li>Email: {{employee.contact.email}}</li>
+    <li>Phone: {{employee.contact.phone}}</li>
+    <li>GitHub {{employee.contact.gitHub}}</li>
+</ul>
+<p>Department: {{employee.department}}</p>
+<p>Location: {{employee.location}}</p>
+<p>Specialty: {{employee.specialty}}</p>
+<p>Skills: {{employee.skills}}</p>
 
 <form action="/:id?_method=DELETE" method="post">
     <input class="" type="submit" value="Delete">
+    <a href="{{employee._id}}/edit">Edit</a>
 </form>

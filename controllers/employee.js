@@ -14,14 +14,55 @@ module.exports = {
   },
 
   create: (req, res) => {
-    res.render("employee/index");
+    const {
+      name,
+      title,
+      email,
+      phone,
+      github,
+      department,
+      location,
+      specialty
+      // skills
+    } = req.body;
+    Employee.create({
+      name,
+      title,
+      email,
+      phone,
+      github,
+      department,
+      location,
+      specialty
+      // skills
+    }).then(item => {
+      res.redirect("/");
+    });
   },
 
   show: (req, res) => {
-    res.render("employee/show");
+    Employee.findOne({ _id: req.params.id }).then(employee => {
+      res.render("employee/show", { employee });
+    });
   },
 
   edit: (req, res) => {
+    Employee.findOne({ _id: req.params.id }).then(employee => {
+      const {
+        name,
+        title,
+        email,
+        phone,
+        github,
+        department,
+        location,
+        specialty
+        // skills
+      } = req.body;
+      employee.save(err => {
+        res.redirect(`/${employee._id}/edit`);
+      });
+    });
     res.render("employee/edit");
   },
 
