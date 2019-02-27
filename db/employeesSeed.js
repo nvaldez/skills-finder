@@ -16,7 +16,7 @@ Employee.remove({}).then(function() {
       contact: {
         email: "neftalivaldez1@gmail.com",
         phone: "123-456-7891",
-        gitHub: "nvaldez"
+        github: "nvaldez"
       },
       department: "Engineer",
       location: "Washington, DC",

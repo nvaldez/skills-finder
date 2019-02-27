@@ -1,11 +1,10 @@
 <h1>Employee Information</h1>
+<p>
+    <a href="/employee/new">Add New Employee</a>
+</p>
 {{#each employees}}
 <p>
     <a href="/employee/{{_id}}">{{name}}</a>
-</p>
-
-<p>
-    <a href="/employee/new">Add New Employee</a>
 </p>
 
 <p>Title: {{title}}</p>

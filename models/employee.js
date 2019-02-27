@@ -7,7 +7,7 @@ const Employee = new Schema({
   contact: {
     email: String,
     phone: String,
-    gitHub: String
+    github: String
   },
   department: String,
   location: String,
