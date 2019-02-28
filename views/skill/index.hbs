@@ -1,0 +1,10 @@
+<h1>Skills List</h1>
+
+<a href="/skill/new">Add New Skill</a>
+
+{{#each skills}}
+<p>
+    <a href="/skill/{{_id}}">{{name}}</a>
+</p>
+<p>{{description}}</p>
+{{/each}}

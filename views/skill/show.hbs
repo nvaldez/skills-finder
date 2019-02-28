@@ -1,0 +1,17 @@
+<h1>Skill Information</h1>
+
+<h4>Skill
+</h4>
+
+<p>{{skills.name}}</p>
+
+<h4>Description
+</h4>
+
+<p>{{skills.description}}</p>
+
+
+<form action="/skill/{{skill._id}}?_method=DELETE" method="post">
+    <input class="" type="submit" value="Delete">
+    <a href="/skill/{{skill._id}}/edit">Edit</a>
+</form>

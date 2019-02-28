@@ -6,5 +6,6 @@ router.get("/", function(req, res) {
 });
 
 router.use("/employee", require("./employee"));
+router.use("/skill", require("./skill"));
 
 module.exports = router;
