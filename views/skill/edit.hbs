@@ -1,0 +1,16 @@
+<h1>Edit Skill</h1>
+
+<form action="/skill/{{skills._id}}?_method=PUT" method="post">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{skills.name}}">
+    </p>
+
+    <p>
+        <label for="description">Description:</label>
+        <textarea name="description" cols="40" rows="6">{{skills.description}}</textarea>
+    </p>
+
+    <input type="submit" value="Update">
+
+</form>

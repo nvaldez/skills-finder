@@ -25,40 +25,32 @@ module.exports = {
     Skill.findOne({ _id: req.params.id }).then(skills => {
       res.render("skill/show", { skills });
     });
+  },
+
+  edit: (req, res) => {
+    // res.send("working");
+    Skill.findOne({ _id: req.params.id }).then(skills => {
+      res.render("skill/edit", { skills });
+    });
+  },
+
+  update: (req, res) => {
+    Skill.findOne({
+      _id: req.params.id
+    }).then(skills => {
+      skills.name = req.body.name;
+      skills.description = req.body.description;
+
+      skills.save(err => {
+        if (err) return res.status(500).send(err);
+        res.redirect("/skill");
+      });
+    });
+  },
+
+  delete: (req, res) => {
+    Skill.findByIdAndRemove({ _id: req.params.id }).then(skills => {
+      res.redirect("/skill");
+    });
   }
-
-  //   edit: (req, res) => {
-  //     // res.send("working");
-  //     Employee.findOne({ _id: req.params.id }).then(employee => {
-  //       res.render("employee/edit", { employee });
-  //     });
-  //   },
-
-  //   update: function(req, res) {
-  //     Employee.findOne({
-  //       _id: req.params.id
-  //     }).then(employee => {
-  //       employee.name = req.body.name;
-  //       employee.title = req.body.title;
-  //       employee.contact.email = req.body.contact.email;
-  //       employee.contact.phone = req.body.contact.phone;
-  //       employee.contact.github = req.body.contact.github;
-  //       employee.department = req.body.department;
-  //       employee.location = req.body.location;
-  //       employee.specialty = req.body.specialty;
-
-  //       console.log(employee.contact.email);
-
-  //       employee.save(err => {
-  //         if (err) return res.status(500).send(err);
-  //         res.redirect("/");
-  //       });
-  //     });
-  //   },
-
-  //   delete: function(req, res) {
-  //     Employee.findByIdAndRemove({ _id: req.params.id }).then(employee => {
-  //       res.redirect("/");
-  //     });
-  //   }
 };

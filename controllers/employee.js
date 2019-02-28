@@ -34,11 +34,6 @@ module.exports = {
     }).then(employee => {
       res.redirect("/employee");
     });
-    // console.log(name);
-    // console.log(title);
-    // console.log(contact[email]);
-    // console.log(contact[phone]);
-    // console.log(contact[github]);
   },
 
   show: (req, res) => {
