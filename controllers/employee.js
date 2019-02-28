@@ -90,8 +90,8 @@ module.exports = {
       .populate("skills")
       .exec((err, employees) => {
         if (err) console.log(err);
-        console.log(employees);
-        // res.render("employees/index", { employees })
+        // console.log(employees);
+        res.render("employee/match-skill", { employees });
       });
   }
 };
