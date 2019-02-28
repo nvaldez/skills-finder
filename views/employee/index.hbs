@@ -1,25 +1,36 @@
-<h1>Employee Information</h1>
+<h1 class="mt-5 mb-5 text-center text-info">Employee Information</h1>
 <p>
-    <a href="/employee/new">Add New Employee</a>
+    <a class="btn btn-dark btn-lg mb-5" href="/employee/new">Add New Employee</a>
 </p>
 {{#each employees}}
-<p>
-    <a href="/employee/{{_id}}">{{name}}</a>
-</p>
 
-<p>Title: {{title}}</p>
-<p>Contact</p>
-<ul>
-    <li>Email: {{contact.email}}</li>
-    <li>Phone: {{contact.phone}}</li>
-    <li>GitHub {{contact.github}}</li>
-</ul>
-<p>Department: {{department}}</p>
-<p>Location: {{location}}</p>
-<p>Specialty: {{specialty}}</p>
-<p>Skills: {{skills}}</p>
+<div class="card border-info mb-3" style="width: 30rem;">
+
+    <div class=" card-header">
+
+        <p>
+            <h3>
+                <a class="btn btn-outline-info btn-lg" href="/employee/{{_id}}">{{name}}</a>
+
+            </h3>
+        </p>
+    </div>
+
+    <div class="card-body text-info">
+
+        <p>Title: {{title}}</p>
+        <p>Contact</p>
+        <ul class="list-group mb-3" style="width: 18rem;">
+            <li class="list-group-item">Email: {{contact.email}}</li>
+            <li class="list-group-item">Phone: {{contact.phone}}</li>
+            <li class="list-group-item">GitHub {{contact.github}}</li>
+        </ul>
+        <p>Department: {{department}}</p>
+        <p>Location: {{location}}</p>
+        <p>Specialty: {{specialty}}</p>
+        <p>Skills: {{skills}}</p>
+
+    </div>
+</div>
 
 {{/each}}
-{{!-- <form action="/employee" method="post">
-    <input class="" type="submit" value="Submit">
-</form> --}}

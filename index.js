@@ -6,6 +6,7 @@ const mongo = require("mongodb").MongoClient;
 const methodOverride = require("method-override");
 
 app.set("view engine", "hbs");
+app.use(express.static("public"));
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
