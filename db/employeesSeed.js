@@ -4,7 +4,7 @@ const { Employee, Skill } = require("../models/index");
 Employee.remove({}).then(function() {
   // 1. get all of the Skills from the database (already seeded by `db/skillsSeed`)
   Skill.find({}).then(skills => {
-    let employeeSkills = ["HTML", "CSS", ""];
+    let employeeSkills = ["HTML", "CSS", "JavaScript"];
     employeeSkills = employeeSkills.map(skillName => {
       let match = skills.find(skill => skill.name === skillName);
       return match._id;

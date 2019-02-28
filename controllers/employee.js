@@ -91,7 +91,7 @@ module.exports = {
       .exec((err, employees) => {
         if (err) console.log(err);
         // console.log(employees);
-        res.render("employee/match-skill", { employees });
+        res.render("employee", { employees });
       });
   }
 };
