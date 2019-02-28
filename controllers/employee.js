@@ -2,9 +2,15 @@ const { Employee, Skill } = require("../models/index");
 
 module.exports = {
   index: (req, res) => {
-    Employee.find({}).then(employees => {
-      res.render("employee/index", { employees });
-    });
+    Employee.find({})
+      .populate("skills")
+      .exec((err, employees) => {
+        if (err) console.log(err);
+
+        // console.log(employees);
+
+        res.render("employee", { employees });
+      });
   },
 
   new: (req, res) => {
@@ -20,7 +26,8 @@ module.exports = {
       contact,
       department,
       location,
-      specialty
+      specialty,
+      skill
     } = req.body;
     Employee.create({
       name,
@@ -30,7 +37,8 @@ module.exports = {
       contact,
       department,
       location,
-      specialty
+      specialty,
+      skill
     }).then(employee => {
       res.redirect("/employee");
     });
@@ -73,7 +81,17 @@ module.exports = {
 
   delete: function(req, res) {
     Employee.findByIdAndRemove({ _id: req.params.id }).then(employee => {
-      res.redirect("/");
+      res.redirect("/employee");
     });
+  },
+
+  getEmployeeBySkill: (req, res) => {
+    Employee.find({ skills: req.params.id })
+      .populate("skills")
+      .exec((err, employees) => {
+        if (err) console.log(err);
+        console.log(employees);
+        // res.render("employees/index", { employees })
+      });
   }
 };

@@ -20,7 +20,10 @@
         <p>Department: {{department}}</p>
         <p>Location: {{location}}</p>
         <p>Specialty: {{specialty}}</p>
-        <p>Skills: {{skills}}</p>
+        <p>Skills:</p>
+        {{#each skills}}
+        <p> {{name}}</p>
+        {{/each}}
 
     </div>
 </div>

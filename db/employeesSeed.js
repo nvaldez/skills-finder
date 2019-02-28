@@ -4,11 +4,17 @@ const { Employee, Skill } = require("../models/index");
 Employee.remove({}).then(function() {
   // 1. get all of the Skills from the database (already seeded by `db/skillsSeed`)
   Skill.find({}).then(skills => {
-    let employeeSkills = ["NodeJS", "JavaScript", "Express"];
+    let employeeSkills = ["HTML", "CSS", ""];
     employeeSkills = employeeSkills.map(skillName => {
       let match = skills.find(skill => skill.name === skillName);
       return match._id;
     });
+
+    // let employeeSkills2 = ["NodeJS", "JavaScript", "React"];
+    // employeeSkills2 = employeeSkills2.map(skillName2 => {
+    //   let match = skills2.find(skill => skill.name === skillName2);
+    //   return match._id;
+    // });
 
     Employee.create({
       name: "Neftali",
@@ -38,12 +44,7 @@ Employee.remove({}).then(function() {
     //   location: "New York, NY",
     //   specialty: "Full Stack",
 
-    //   skills: [
-    //     {
-    //       type: Schema.Types.ObjectId,
-    //       ref: "Skill"
-    //     }
-    //   ]
+    //   skills: employeeSkills2
     // });
   });
   // 3. in each Employee query, use the Mongoose#populate method to get the Skill data from the Object Id references

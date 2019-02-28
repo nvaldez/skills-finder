@@ -5,7 +5,7 @@ const controller = require("../controllers/employee.js");
 router.get("/", controller.index);
 router.get("/new", controller.new);
 router.post("/", controller.create);
-// router.get('/skill/:skillId', controller, getEmployeeBySkill)
+router.get("/skill/:id", controller.getEmployeeBySkill);
 router.get("/:id", controller.show);
 router.get("/:id/edit", controller.edit);
 router.put("/:id", controller.update);
