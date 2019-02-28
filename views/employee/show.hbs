@@ -1,22 +1,35 @@
-<h1>Employee Information</h1>
-<h4>
-    {{employee.name}}
+<h1 class="mt-5 mb-5 text-center text-info">Employee Information</h1>
 
-</h4>
+<div class="card border-info mb-3" style="width: 30rem;">
 
-<p>Title: {{employee.title}}</p>
-<p>Contact</p>
-<ul>
-    <li>Email: {{employee.contact.email}}</li>
-    <li>Phone: {{employee.contact.phone}}</li>
-    <li>GitHub {{employee.contact.github}}</li>
-</ul>
-<p>Department: {{employee.department}}</p>
-<p>Location: {{employee.location}}</p>
-<p>Specialty: {{employee.specialty}}</p>
-<p>Skills: {{employee.skills}}</p>
+    <div class="card-header btn-outline-info btn-lg bg-info text-white">
+        <h4>
+            {{employee.name}}
+        </h4>
+    </div>
 
-<form action="/employee/{{employee._id}}?_method=DELETE" method="post">
-    <input class="" type="submit" value="Delete">
-    <a href="/employee/{{employee._id}}/edit">Edit</a>
-</form>
+    <div class="card-body text-info">
+
+        <p>Title: {{employee.title}}</p>
+        <p>Contact</p>
+        <ul>
+            <li>Email: {{employee.contact.email}}</li>
+            <li>Phone: {{employee.contact.phone}}</li>
+            <li>GitHub {{employee.contact.github}}</li>
+        </ul>
+        <p>Department: {{employee.department}}</p>
+        <p>Location: {{employee.location}}</p>
+        <p>Specialty: {{employee.specialty}}</p>
+        <p>Skills: {{employee.skills}}</p>
+
+        <form action="/employee/{{employee._id}}?_method=DELETE" method="post">
+            <div class="text-center">
+                <input class="btn btn-outline-dark m-3" type="submit" value="Delete">
+                <a class="btn btn-outline-dark m-3" href="/employee/{{employee._id}}/edit">Edit</a>
+                <a class="btn btn-outline-dark m-3" href="/employee">Employee Home Page</a>
+            </div>
+        </form>
+    </div>
+
+
+</div>
