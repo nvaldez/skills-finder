@@ -1,6 +1,6 @@
 # Skills Finder
 
-This application will help employees to find people based on specific skills that they need helps with. For example, if you work in a software company and need to consult, need help, or would like to talk to someone about JavaScript, Node.JS, or MongoDB you would type the skill in a search engine and the application will show the person o people with skill. If there is any results, it will show the name, list of skills, a profile that includes contact, department, and location. 
+This application will help employees to find people based on specific skills that they need helps with. For example, if you work in a software company and need help, or would like to talk to someone about JavaScript, Node.JS, or MongoDB you would type the skill in a search engine and the application will show the person o people with that skill. If there is any results, it will show the employee(s) list of skills and a profile that includes contact, department, and location. 
 
 ### Prerequisites
 
@@ -10,7 +10,7 @@ Please make sure that you have all the necessary dependencies install on your lo
 
 please visit the below link to see and use the deployed application.
 
-`link will be posted here once the application is deployed` 
+[Skill-Finder](https://skill-finder.herokuapp.com)
 
 ## Built With
 
@@ -18,6 +18,7 @@ please visit the below link to see and use the deployed application.
 * [Express.JS](https://expressjs.com/)
 * [MongoDB](https://www.mongodb.com/)
 * [Handlebars(HBS)](http://handlebarsjs.com/)
+* [Bootstrap](https://getbootstrap.com/)
 
 ## Contributing
 
