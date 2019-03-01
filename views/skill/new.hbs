@@ -1,16 +1,22 @@
-<h2>Create new employee profile</h2>
+<h1 class="mt-5 mb-5 text-center text-info">Add New Skill</h1>
 
-<form action="/skill" method="post">
-    <p>
-        <label for="name">Name:</label>
-        <input type="text" name="name">
-    </p>
+<div class="card border-info mb-3" style="width: 30rem;">
 
-    <p>
-        <label for="description">Description:</label>
-        <textarea name="description" cols="40" rows="4"></textarea>
-    </p>
+    <div class="card-body text-info">
+        <form action="/skill" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" id="exampleFormControlInput1" type="text" name="name">
+            </div>
 
-    <input type="submit" value="Save">
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="description" cols="40"
+                    rows="4"></textarea>
+            </div>
 
-</form>
+            <input class="btn btn-outline-dark m-3" type="submit" value="Add Skill">
+
+        </form>
+    </div>
+</div>

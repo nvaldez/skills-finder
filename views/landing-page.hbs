@@ -1,7 +1,17 @@
 <h1 class="mt-5 mb-5 text-center text-info">Please Chose Skill</h1>
 
+
+
 {{#each skills}}
-<div class="text-center">
-    <a class="btn btn-outline-dark m-3" href="/employee/skill/{{_id}}">{{name}}</a>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <a style="width: 20rem;" class="btn btn-outline-dark m-3" href="/employee/skill/{{_id}}">{{name}}</a>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 {{/each}}
