@@ -6,6 +6,7 @@ Employee.remove({}).then(function() {
   Skill.find({}).then(skills => {
     let employeeSkills = ["HTML", "CSS", "JavaScript"];
     employeeSkills = employeeSkills.map(skillName => {
+      console.log(skillName);
       let match = skills.find(skill => skill.name === skillName);
       return match._id;
     });
