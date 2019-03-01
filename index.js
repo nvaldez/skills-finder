@@ -43,11 +43,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-<<<<<<< HEAD
-=======
 app.use(require("./routes/index.js"));
 
->>>>>>> authentication
 app.set("port", process.env.PORT || 4000);
 
 app.listen(app.get("port"), () => {
