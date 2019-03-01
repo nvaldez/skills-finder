@@ -4,7 +4,8 @@
   "description": "This application will help employees to find people based on specific skills that they need helps with. For example, if you work in a software company and need to consult, need help, or would like to talk to someone about JavaScript, Node.JS, or MongoDB you would type the skill in a search engine and the application will show the person o people with skill. If there is any results, it will show the name, list of skills, a profile that includes contact, department, and location.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
