@@ -7,8 +7,6 @@ module.exports = {
       .exec((err, employees) => {
         if (err) console.log(err);
 
-        // console.log(employees);
-
         res.render("employee", { employees });
       });
   },
@@ -54,7 +52,6 @@ module.exports = {
   },
 
   edit: (req, res) => {
-    // res.send("working");
     Employee.findOne({ _id: req.params.id })
       .populate("skills")
       .exec((err, employee) => {
@@ -94,7 +91,6 @@ module.exports = {
       .populate("skills")
       .exec((err, employees) => {
         if (err) console.log(err);
-        // console.log(employees);
         res.render("employee", { employees });
       });
   }

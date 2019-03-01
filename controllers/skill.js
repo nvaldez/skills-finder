@@ -28,7 +28,6 @@ module.exports = {
   },
 
   edit: (req, res) => {
-    // res.send("working");
     Skill.findOne({ _id: req.params.id }).then(skills => {
       res.render("skill/edit", { skills });
     });
