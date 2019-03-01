@@ -1,31 +1,36 @@
 {{#if employees}}
 <h1 class="mt-5 mb-5 text-center text-info">Employee Information</h1>
-{{#each employees}}
 
-<div class="card border-info mb-3" style="width: 30rem;">
+<div class="row">
 
-    <a class=" card-header bg-info btn btn-outline-info text-white btn-lg" href="/employee/{{_id}}">{{name}}</a>
 
-    <div class="card-body text-info">
+    {{#each employees}}
 
-        <p>Title: {{title}}</p>
-        <p>Contact</p>
-        <ul class="list-group mb-3" style="width: 18rem;">
-            <li class="list-group-item">Email: {{contact.email}}</li>
-            <li class="list-group-item">Phone: {{contact.phone}}</li>
-            <li class="list-group-item">GitHub {{contact.github}}</li>
-        </ul>
-        <p>Department: {{department}}</p>
-        <p>Location: {{location}}</p>
-        <p>Specialty: {{specialty}}</p>
-        <p>Skills:</p>
-        {{#each skills}}
-        <p> {{name}}</p>
-        {{/each}}
+    <div class="card border-info m-5 col-sm-4" style="width: 30rem;">
 
+        <a class="card-header bg-info btn btn-outline-info text-white btn-lg" href="/employee/{{_id}}">{{name}}</a>
+
+        <div class="card-body text-info">
+
+            <p>Title: {{title}}</p>
+            <p>Contact</p>
+            <ul class="list-group mb-3" style="width: 16rem;">
+                <li class="list-group-item">Email: {{contact.email}}</li>
+                <li class="list-group-item">Phone: {{contact.phone}}</li>
+                <li class="list-group-item">GitHub {{contact.github}}</li>
+            </ul>
+            <p>Department: {{department}}</p>
+            <p>Location: {{location}}</p>
+            <p>Specialty: {{specialty}}</p>
+            <p>Skills:</p>
+            {{#each skills}}
+            <p> {{name}}</p>
+            {{/each}}
+
+        </div>
     </div>
+    {{/each}}
 </div>
-{{/each}}
 
 {{else}}
 <h2 class="mt-5 mb-5 text-center text-info">EMPLOYEE NOT FOUND</h2>
