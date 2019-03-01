@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/skillFinder");
 mongoose.Promise = Promise;
 
 if (process.env.NODE_ENV == "production") {

@@ -14,10 +14,6 @@ app.use(methodOverride("_method"));
 
 app.use(require("./routes/index.js"));
 
-// app.listen(4000, () => {
-//   console.log("\napp listening on port 4000\n\n");
-// });
-
 app.set("port", process.env.PORT || 4000);
 
 app.listen(app.get("port"), () => {
