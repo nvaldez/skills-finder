@@ -4,7 +4,7 @@ This application will help employees to find people based on specific skills tha
 
 ### Prerequisites
 
-Please make sure that you have all the necessary dependencies install on your local machine. For full list of dependencies installed in this application, please to the `package.json` file in this repository. 
+Please make sure that you have all the necessary dependencies install on your local machine. For full list of dependencies installed in this application, please to the `package.json` file in this repository. When running the seeds files, make sure to run `skillsSeed.js` file first and then `employeesSeed.js` file to avoid and error with the `_id`. 
 
 ## Deployment
 
