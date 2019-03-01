@@ -1,7 +1,5 @@
+{{#if employees}}
 <h1 class="mt-5 mb-5 text-center text-info">Employee Information</h1>
-<p>
-    <a class="btn btn-dark btn-lg mb-5" href="/employee/new">Add New Employee</a>
-</p>
 {{#each employees}}
 
 <div class="card border-info mb-3" style="width: 30rem;">
@@ -27,5 +25,9 @@
 
     </div>
 </div>
-
 {{/each}}
+
+{{else}}
+<h2 class="mt-5 mb-5 text-center text-info">EMPLOYEE NOT FOUND</h2>
+<H3 class="mt-5 mb-5 text-center text-info">Please search for a different skill</H3>
+{{/if}}
