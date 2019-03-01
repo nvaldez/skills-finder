@@ -1,7 +1,9 @@
+html {
+  background-color: darkslategray;
+}
 body {
   width: 900px;
   margin: 0 auto;
-  border: 2px solid black;
 }
 .card {
   margin: 0 auto;

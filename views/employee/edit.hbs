@@ -52,18 +52,20 @@
                 <input class="form-control" id="exampleFormControlInput1" type="text" name="specialty"
                     value="{{employee.specialty}}">
             </div>
+            <label for="skills">Skills</label>
+            {{#each employee}}
+            {{#each skills}}
             <div class="form-group">
-                <label for="skills">Skills</label>
-                <input class="form-control" id="exampleFormControlInput1" type="text" name="skills"
-                    value="{{employee.skills}}">
+                <input class="form-control" id="exampleFormControlInput1" type="text" name="skills" value="{{name}}">
             </div>
+            {{/each}}
+            {{/each}}
 
             <div class="text-center">
                 <input class="btn btn-outline-dark m-3" type="submit" value="Update">
                 <a class="btn btn-outline-dark m-3" href="/employee">Employee Home Page</a>
             </div>
     </div>
-
 
     </form>
 </div>

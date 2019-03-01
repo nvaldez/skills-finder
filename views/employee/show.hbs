@@ -21,7 +21,11 @@
         <p>Department: {{employee.department}}</p>
         <p>Location: {{employee.location}}</p>
         <p>Specialty: {{employee.specialty}}</p>
-        <p>Skills: {{employee.skills}}</p>
+        {{#each employee}}
+        {{#each skills}}
+        <p>{{name}}</p>
+        {{/each}}
+        {{/each}}
 
         <form action="/employee/{{employee._id}}?_method=DELETE" method="post">
             <div class="text-center">

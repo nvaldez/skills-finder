@@ -45,16 +45,22 @@ module.exports = {
   },
 
   show: (req, res) => {
-    Employee.findOne({ _id: req.params.id }).then(employee => {
-      res.render("employee/show", { employee });
-    });
+    Employee.findOne({ _id: req.params.id })
+      .populate("skills")
+      .exec((err, employee) => {
+        if (err) console.log(err);
+        res.render("employee/show", { employee });
+      });
   },
 
   edit: (req, res) => {
     // res.send("working");
-    Employee.findOne({ _id: req.params.id }).then(employee => {
-      res.render("employee/edit", { employee });
-    });
+    Employee.findOne({ _id: req.params.id })
+      .populate("skills")
+      .exec((err, employee) => {
+        if (err) console.log(err);
+        res.render("employee/edit", { employee });
+      });
   },
 
   update: function(req, res) {
@@ -70,11 +76,9 @@ module.exports = {
       employee.location = req.body.location;
       employee.specialty = req.body.specialty;
 
-      console.log(employee.contact.email);
-
       employee.save(err => {
         if (err) return res.status(500).send(err);
-        res.redirect("/");
+        res.redirect("/employee");
       });
     });
   },
