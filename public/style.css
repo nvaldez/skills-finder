@@ -9,3 +9,7 @@ body {
 .card {
   margin: 0 auto;
 }
+.login {
+  margin: 0 auto;
+  text-align: -webkit-center;
+}
